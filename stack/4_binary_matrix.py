@@ -3,6 +3,7 @@ Problem statement: Given a 2 D array of only one and zeroes, output the maximum 
 in matrix which only contains 1
 """
 
+
 def MAH(histogram):
     stack = list()
     max_area = 0
