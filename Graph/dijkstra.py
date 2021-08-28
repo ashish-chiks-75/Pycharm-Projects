@@ -12,6 +12,8 @@ def dijkstra(graph, n, src):
     
     while heap:
         d, node = heappop(heap)
+        if dist[node] < d:
+            continue
         vis[node] = True
         for adj, weight in graph[node]:
             if not vis[adj] and d + weight < dist[adj]:
@@ -30,12 +32,5 @@ G = [[(1, 5), (2, 1)],
      [(1, 3), (4, 12)], 
      [(2, 3), (4, 2), (5, 6)],
      [(5, 1)],
-     []
-    ]
+     []]
 print(dijkstra(G, V, 0))
-
-
-
-
-    
-    

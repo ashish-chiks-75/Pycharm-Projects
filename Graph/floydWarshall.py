@@ -1,5 +1,4 @@
 def floydWarshall(graph, n):
-    inf = 10**9
     dist = [[graph[q][p] for p in range(n)] for q in range(n)]
     
     for k in range(n):
@@ -17,6 +16,5 @@ G = [[0, 5, 1, inf, inf, inf],
      [inf, 3, 0, inf, 12, inf],
      [inf, inf, 3, 0, 2, 6],
      [inf, inf, inf, inf, 0, 1],
-     [inf, inf, inf, inf, inf, 0],
-    ]
+     [inf, inf, inf, inf, inf, 0]]
 print(floydWarshall(G, V))
