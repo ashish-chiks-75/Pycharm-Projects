@@ -6,7 +6,7 @@ class DSU:
     
     def findPar(self, z):
         if self.par[z] == -1:
-            return self.par[z]
+            return z
         self.par[z] = self.findPar(self.par[z])
         return self.par[z]
     
